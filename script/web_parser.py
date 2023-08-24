@@ -55,7 +55,7 @@ class web_paresr(unittest.TestCase):
 if __name__ == '__main__':
 	suite = unittest.TestSuite(unittest.TestLoader().loadTestsFromTestCase(web_paresr))
 	runner = HTMLTestRunner(
-		log=True, verbosity=2, output='report', title='Test report', report_name='report', 
+		log=True, verbosity=2, output='../report/web/', title='Test report', report_name='report', 
 		open_in_browser=True, description='HTMLTestReport', tested_by='ZL', add_traceback=False
 	)
 	runner.run(suite)
