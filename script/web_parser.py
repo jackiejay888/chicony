@@ -15,6 +15,10 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from HTMLTestRunner.runner import HTMLTestRunner
 
+import sys
+sys.path.insert(0, '..\\lib')
+from notification import line
+
 class web_paresr(unittest.TestCase):
 	def setUp(self):
 		options = webdriver.ChromeOptions()
@@ -59,3 +63,5 @@ if __name__ == '__main__':
 		open_in_browser=True, description='HTMLTestReport', tested_by='ZL', add_traceback=False
 	)
 	runner.run(suite)
+	notify = line()
+	notify.send_message('Web Paresr is Completed')
